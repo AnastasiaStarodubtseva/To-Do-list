@@ -1,0 +1,64 @@
+html {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+body {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fdfdfd;
+}
+
+h2 {
+  color: rgba(175, 47, 47, 0.15);
+  text-align: center;
+  font-size: 100px;
+  font-weight: 100;
+  margin-bottom: 15px;
+  margin-top: 50px;
+}
+
+input {
+  width: 500px;
+  height: 60px;
+  font-size: 40px;
+  border: 0;
+  text-align: center;
+  color: #f1ddde;
+  margin-bottom: 25px;
+  margin-top: -15px;
+  margin-left: 12px;
+  background-color: #fdfdfd;
+  font-family: 'Raleway', sans-serif;
+}
+
+input:focus {
+  outline: none;
+}
+
+ul {
+  border: 1px solid #e8e4e4;
+  box-sizing: border-box;
+  margin-top: -5px;
+  box-shadow: -webkit-box-shadow: -2px 3px 31px -8px rgba(153,153,153,0.56);
+  -moz-box-shadow: -2px 3px 31px -8px rgba(153,153,153,0.56);
+  box-shadow: -2px 3px 31px -8px rgba(153,153,153,0.56);
+  font-family: 'Qwigley', cursive;
+  margin-left: 10px;
+}
+
+li {
+  text-align: left;
+  font-size: 26px;
+  font-weight: 100;
+  list-style: none;
+  margin: 15px;
+  color: #747581;
+  line-height: 30px;
+  font-family: 'Raleway', sans-serif;
+}
+
+img {
+  width: 20px;
+}
+
