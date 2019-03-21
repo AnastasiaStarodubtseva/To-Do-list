@@ -23,7 +23,6 @@ input {
   height: 60px;
   font-size: 40px;
   border: 0;
-  text-align: center;
   color: #f1ddde;
   margin-bottom: 25px;
   margin-top: -15px;
@@ -48,6 +47,7 @@ ul {
 }
 
 li {
+  position: relative;
   text-align: left;
   font-size: 26px;
   font-weight: 100;
@@ -56,6 +56,33 @@ li {
   color: #747581;
   line-height: 30px;
   font-family: 'Raleway', sans-serif;
+}
+
+li:hover button {
+  display: block;
+}
+
+button:first-child {
+  position: absolute;
+  right: 45px;
+  top: 4px;
+  background-image: url(../img/delete.svg);
+  width: 21px;
+  height: 21px;
+  background-size: 21px;
+  background-repeat: no-repeat;
+}
+
+button {
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  background-image: url(../img/pencil.png);
+  width: 21px;
+  height: 21px;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  display: none;
 }
 
 img {
