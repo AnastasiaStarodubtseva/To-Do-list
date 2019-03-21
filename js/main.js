@@ -7,14 +7,12 @@ function newItem() {
 
   todoItem.appendChild(document.createTextNode(todoInput.value));
   todoItem.appendChild(deleteButton);
-  deleteButton.appendChild(document.createTextNode("delete"));
   deleteButton.onclick = deleteTodoItem;
   todoItems.appendChild(todoItem);
   todoInput.value = "";
   
   todoItem.appendChild(editButton);
-  editButton.appendChild(document.createTextNode("edit"));
-  
+  editButton.onclick = createTodoInput;
 }
 
 function deleteTodoItem() {
@@ -22,11 +20,25 @@ function deleteTodoItem() {
   todoItem.parentNode.removeChild(todoItem);
 }
 
-function ed
+function createTodoInput() {
+  var todoItem = this.parentElement;
+  var currentTextNode = todoItem.firstChild;
+  var inputField = document.createElement("input");
 
-document.body.onkeyup = function(e) {
-  if (e.keyCode == 13) {
+  todoItem.appendChild(inputField);
+  inputField.value = currentTextNode.textContent;
+  currentTextNode.parentNode.removeChild(currentTextNode);
+  inputField.focus();
+  inputField.onkeyup = function(event) {
+    if (event.keyCode !== 13) { return; }
+    var newInputText = document.createTextNode(inputField.value);
+    todoItem.insertBefore(newInputText, todoItem.firstChild);
+    todoItem.removeChild(inputField);
+  }
+}
+
+document.getElementById("add-todo-item").onkeyup = function(event) {
+  if (event.keyCode === 13) {
     newItem();
   }
-};
-
+}
