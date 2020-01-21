@@ -4,6 +4,8 @@
 
 This is an interactive To Do list. It can help you be more organized.
 
+[View a live demo here](https://todo.anastasiastarodubtseva.com)
+
 #### Usage
 
 - To create a task, type your task in the text input and press enter.
